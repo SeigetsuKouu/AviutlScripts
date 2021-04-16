@@ -1,0 +1,20 @@
+--track0:‘¬“x,0,99999,10
+--dialog:XˆÚ“®—Ê,x_move=100;‰ñ“]Œü‚«‹t“]/chk,x_reverse=0;YˆÚ“®—Ê,y_move=10;‰ñ“]Œü‚«‹t“]/chk,y_reverse=0;ZˆÚ“®—Ê,z_move=10;‰ñ“]Œü‚«‹t“]/chk,z_reverse=0;
+
+speed = obj.track0
+
+-- ˆÚ“®•ûŒü‚Ì”½“]
+if (x_reverse==1) then
+  x_move = x_move * -1
+end
+if (y_reverse==1) then
+  y_move = y_move * -1
+end
+if (z_reverse==1) then
+  z_move = z_move * -1
+end
+
+-- ˆÊ’u‚ÌŒvŽZ
+obj.ox = math.sin(obj.time*speed)*x_move
+obj.oy = math.sin(obj.time*speed + (math.pi/2))*y_move
+obj.oz = math.sin(obj.time*speed + math.pi)*z_move
