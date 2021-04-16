@@ -1,0 +1,6 @@
+--track0:èdóÕâ¡ë¨ìx,0,99999,980
+
+a=-obj.track0
+v0=-(a*obj.totaltime)/2
+
+obj.oy=-(v0*obj.time+(a*obj.time^2)/2)

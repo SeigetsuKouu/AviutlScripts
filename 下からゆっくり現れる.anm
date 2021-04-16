@@ -1,0 +1,20 @@
+--track0:“oêˆÊ’u,-1000,1000,0
+--track1:ˆÚ“®ŠÔ,0,100,0
+--track2:Á‚¦‚éˆÊ’u,-1000,1000,0
+--track3:Á‚¦‚é‚Ü‚Å‚ÌŠÔ,0,1000,0
+
+firstLoc=obj.track0
+moveTime=obj.track1
+removeLoc=obj.track2
+removeTime=obj.track3
+
+if(obj.time<moveTime) then
+ obj.oy=(firstLoc*((obj.time-moveTime)/moveTime))
+ obj.alpha=((obj.time)/moveTime)
+end
+
+remainTime=obj.totaltime-obj.time
+if(remainTime<removeTime) then
+ obj.oy=removeLoc*((removeTime-remainTime)/removeTime)
+ obj.alpha=remainTime/removeTime
+end
